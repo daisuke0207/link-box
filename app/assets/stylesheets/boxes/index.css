@@ -27,31 +27,28 @@
 }
 
 /* main-layout */
-.main-page {
+.connect {
+  height: 120px;
+  width: 100px;
+  margin: 50px;
   display: grid;
   grid-template: 
-    "..... ..... ....." 50px
+    "..... ..... ....." 0px
     "..... title ....." 20px
+    "..... ..... ....." 0px
     "..... image ....." 100px
-    "..... text  ....."  50px
-    "..... ..... ....."
-    /50px 100px auto;
+    "..... ..... ....." 0px
+    /auto 100% auto;
 }
 
 .link-title {
   grid-area: title;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid lightblue;
 }
 
 .image-link {
   grid-area: image;
-}
-
-.link-text {
-  grid-area: text;
-  text-align: center;
-  border: 1px solid black;
 }
 
 
