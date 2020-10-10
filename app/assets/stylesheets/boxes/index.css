@@ -1,4 +1,4 @@
-/* main-layout */
+/* top-layout */
 
 .wrapper {
   height: 100vh;
@@ -9,17 +9,16 @@
     "..... .....  .....  .....  ....." 0px
     "..... side   .....  main   ....." 1fr
     "..... .....  .....  .....  ....." 0px
-    / auto 200px auto 1fr auto;
+    /auto  200px  auto   1fr    auto;
 }
 
 .top-page-header {
   grid-area: header;
-  background-color: black;
 }
 
 .main-page{
   grid-area: main;
-  background-color: li;
+  background-color: white;
 }
 
 .side-bar {
