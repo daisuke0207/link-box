@@ -30,7 +30,6 @@
 | -------- | ----------- | ------------------------------ |
 | title    | string      | null: false                    |
 | my_link  | string      | null: false                    |
-| text     | text        |                                |
 | position | integer     | null: false                    |
 | user     | references  | null: false, foreign_key: true |
 | box      | references  | null: false, foreign_key: true |
