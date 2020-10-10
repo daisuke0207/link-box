@@ -40,6 +40,8 @@
 
 .link-title {
   grid-area: title;
+  text-align: center;
+  border: 1px solid black;
 }
 
 .image-link {
@@ -48,6 +50,8 @@
 
 .link-text {
   grid-area: text;
+  text-align: center;
+  border: 1px solid black;
 }
 
 
