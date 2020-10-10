@@ -27,9 +27,6 @@
 }
 
 /* main-layout */
-
-
-/* main-layout */
 .main-page {
   display: grid;
   grid-template: 
@@ -61,4 +58,8 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+.new-box {
+  background-color:rgba(211, 211, 211, 0.212);
 }
