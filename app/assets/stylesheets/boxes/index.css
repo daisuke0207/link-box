@@ -19,8 +19,20 @@
 
 .main-page{
   grid-area: main;
+  background-color: li;
 }
 
 .side-bar {
   grid-area: side ;
+  background-color: lightslategray;
+}
+
+
+/* side-css */
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
