@@ -1,0 +1,42 @@
+.top-page-header {
+  background-color: black;
+  display: grid;
+  grid-template: 
+    "..... ..... ..... ..... ..... ..... ..... ..... ....."
+    "..... title ..... box   ..... left  ..... right ....." 100%
+    "..... ..... ..... ..... ..... ..... ..... ..... ....." 
+    /10vw  auto  30px  auto  1fr   auto  15px  auto  10vw;
+    align-items: center;
+}
+
+.top-page-header div:not(.title) {
+  color: white;
+}
+
+.title {
+  grid-area: title;
+  font-weight: bold;
+  font-size: 24px;
+  color: red;
+}
+
+.box-view {
+  grid-area: box;
+  font-size: 24px;
+}
+
+.login {
+  grid-area: left;
+}
+
+.sign-up {
+  grid-area: right;
+}
+
+.user-nickname {
+  grid-area: left;
+}
+
+.logout {
+  grid-area: right;
+}

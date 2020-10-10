@@ -1,0 +1,69 @@
+/* top-layout */
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template: 
+    "..... .....  .....  .....  ....." 0px
+    "..... header header header ....." 68px
+    "..... .....  .....  .....  ....." 0px
+    "..... side   .....  main   ....." 1fr
+    "..... .....  .....  .....  ....." 0px
+    /auto  200px  auto   1fr    auto;
+}
+
+.top-page-header {
+  grid-area: header;
+}
+
+.main-page{
+  grid-area: main;
+  background-color: white;
+}
+
+.side-bar {
+  grid-area: side ;
+  background-color: lightslategray;
+}
+
+/* main-layout */
+.main-page {
+  display: grid;
+  grid-template: 
+    "..... ..... ....." 50px
+    "..... title ....." 20px
+    "..... image ....." 100px
+    "..... text  ....."  50px
+    "..... ..... ....."
+    /50px 100px auto;
+}
+
+.link-title {
+  grid-area: title;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.image-link {
+  grid-area: image;
+}
+
+.link-text {
+  grid-area: text;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
+/* side-css */
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.new-box {
+  background-color:rgba(211, 211, 211, 0.212);
+}
