@@ -26,6 +26,33 @@
   background-color: lightslategray;
 }
 
+/* main-layout */
+
+
+/* main-layout */
+.main-page {
+  display: grid;
+  grid-template: 
+    "..... ..... ....." 50px
+    "..... title ....." 20px
+    "..... image ....." 100px
+    "..... text  ....."  50px
+    "..... ..... ....."
+    /50px 100px auto;
+}
+
+.link-title {
+  grid-area: title;
+}
+
+.image-link {
+  grid-area: image;
+}
+
+.link-text {
+  grid-area: text;
+}
+
 
 /* side-css */
 
