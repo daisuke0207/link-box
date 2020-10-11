@@ -8,7 +8,7 @@
   <%= f.email_field :email, class: "form-input", id:"email", placeholder:"メールアドレスを入力" %>
   <label class="form-text", for="password">パスワード<span class="indispensable">必須</span></label>
   <%= f.password_field :password, class: "form-input", id:"password", placeholder:"パスワードを入力"%>
-  <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+  <p class='info-text'>※6文字以上のパスワードを設定してください</p>
   <label class="form-text", for="password-confirmation">パスワード(確認)<span class="indispensable">必須</span></label>
   <%= f.password_field :password_confirmation, class:"form-input", id:"password-confirmation", placeholder:"同じパスワードを入力" %>
   <%= f.submit "登録", class: "form-submit" %>
