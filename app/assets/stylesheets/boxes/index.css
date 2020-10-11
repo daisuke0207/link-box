@@ -1,19 +1,13 @@
 /* top-layout */
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template: 
-    "..... .....  .....  .....  ....." 0px
-    "..... header header header ....." 68px
     "..... .....  .....  .....  ....." 0px
     "..... side   .....  main   ....." 1fr
     "..... .....  .....  .....  ....." 0px
     /auto  200px  auto   1fr    auto;
-}
-
-.top-page-header {
-  grid-area: header;
 }
 
 .main-page{
@@ -27,7 +21,7 @@
 }
 
 /* main-layout */
-.connect {
+.main-page {
   height: 120px;
   width: 100px;
   margin: 50px;

@@ -1,0 +1,40 @@
+.registration-main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 300px;
+}
+
+.form-header-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(40, 40, 40);
+  border-bottom: 1px solid #b6b5b5;
+  text-align: center;
+  line-height: 100px;
+}
+
+.form-text {
+  margin-top: 40px;
+}
+
+.form-input {
+  font-size: 16px;
+  resize: none;
+  height: 50px;
+}
+
+.form-submit {
+  margin: 50px 0px 300px;
+  background-color: blue;
+  color: white;
+  height: 50px;
+}
+
+.indispensable {
+  color: red;
+  border: 1px solid rgb(85, 85, 85);
+}
+
+.info-text {
+  color: rgb(94, 94, 94);
+}

@@ -1,6 +1,11 @@
-<div class="title">Link</div>
-<div class="box-view">box</div>
-<div class="login">ログイン</div>
-<div class="sign-up">新規作成</div>
-<div class="user-nickname">ユーザー名</div>
-<div class="logout">ログアウト</div>
+<header class="top-page-header">
+  <%= link_to "Link", root_path, class: "nav title" %>
+  <div class="nav box-view">box</div>
+  <% if user_signed_in? %>
+    <%= link_to current_user.nickname, "#", class: "nav user-nickname" %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>
+  <% else %>
+    <%= link_to "ログイン", new_user_session_path, class: "nav login" %>
+    <%= link_to "新規登録", new_user_registration_path, class: "nav sign-up" %>
+  <% end %>
+</header>
