@@ -1,0 +1,9 @@
+.error-alert {
+  margin: 30px;
+}
+
+.error-message{
+  list-style: circle;
+  margin-top: 10px;
+  color: rgba(255, 0, 0, 0.7);
+}
