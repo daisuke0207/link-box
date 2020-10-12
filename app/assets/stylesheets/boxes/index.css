@@ -55,8 +55,19 @@
   align-items: center;
   padding: 10px 0px;
   text-decoration: none;
+  text-align: center;
 }
 
 .box:hover {
   background-color: lightslategray;
+  cursor: pointer;
+}
+
+.new-box-text {
+  width: 100%;
+  padding: 15px 0px;
+}
+
+.new-submit {
+  width: 100%;
 }

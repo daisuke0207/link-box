@@ -2,5 +2,9 @@
   <%# <%= @boxes.each do |box| %>
     <%= link_to "box名", "#", class: "box" %>
   <%# <% end %>
-  <%= link_to "＋ box新規作成", "#", class: "box new-box"%>
+  <%= form_with url: boxes_path, method: :post do |f| %>
+    <%= f.text_field :name, class: "new-box-text", id: "box-text", style: 'display:none' %>
+    <%= f.submit "追加", class: "new-submit", id: "submit", style: "display:none" %>
+  <% end %>
+  <div class="box" id="new-box" display="block">＋ box作成</div>
 </aside>
