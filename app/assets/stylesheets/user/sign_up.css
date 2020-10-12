@@ -18,9 +18,9 @@
 }
 
 .form-input {
-  font-size: 16px;
   resize: none;
   height: 50px;
+  width: 300px;
 }
 
 .form-submit {
