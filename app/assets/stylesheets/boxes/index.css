@@ -1,22 +1,22 @@
 /* top-layout */
 
 .wrapper {
-  min-height: 100vh;
+  min-height: calc(100vh - 68px);
   display: grid;
-  grid-template: 
+  grid-template:
     "..... .....  .....  .....  ....." 0px
     "..... side   .....  main   ....." 1fr
     "..... .....  .....  .....  ....." 0px
-    /auto  200px  auto   1fr    auto;
+    / auto 200px auto 1fr auto;
 }
 
-.main-page{
+.main-page {
   grid-area: main;
   background-color: white;
 }
 
 .side-bar {
-  grid-area: side ;
+  grid-area: side;
   background-color: lightslategray;
 }
 
@@ -26,13 +26,13 @@
   width: 100px;
   margin: 50px;
   display: grid;
-  grid-template: 
+  grid-template:
     "..... ..... ....." 0px
     "..... title ....." 20px
     "..... ..... ....." 0px
     "..... image ....." 100px
     "..... ..... ....." 0px
-    /auto 100% auto;
+    / auto 100% auto;
 }
 
 .link-title {
@@ -45,7 +45,6 @@
   grid-area: image;
 }
 
-
 /* side-css */
 
 .box {
@@ -56,5 +55,5 @@
 }
 
 .new-box {
-  background-color:rgba(211, 211, 211, 0.212);
+  background-color: rgba(211, 211, 211, 0.212);
 }
