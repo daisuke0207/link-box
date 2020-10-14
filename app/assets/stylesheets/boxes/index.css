@@ -17,11 +17,13 @@
 
 .side-bar {
   grid-area: side;
-  background-color: lightslategray;
+  background-color: rgb(29, 29, 29);
+  overflow: scroll;
 }
 
 /* main-layout */
 .main-page {
+  overflow: scroll;
   height: 120px;
   width: 100px;
   margin: 50px;
@@ -48,12 +50,27 @@
 /* side-css */
 
 .box {
+  background-color: rgba(211, 211, 211, 0.212);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px 0px;
+  text-decoration: none;
+  text-align: center;
+  height: 50px;
 }
 
-.new-box {
-  background-color: rgba(211, 211, 211, 0.212);
+.box:hover {
+  background-color: lightslategray;
+  cursor: pointer;
+}
+
+.new-box-text {
+  width: 100%;
+  padding: 15px 0px;
+}
+
+.new-submit {
+  width: 100%;
 }

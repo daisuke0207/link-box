@@ -1,5 +1,14 @@
 <aside class="side-bar">
-  <div class="box">main-box</div>
-  <div class="box">sub-box</div>
-  <div class="box new-box">box作成</div>
+  <% @boxes.each do |box| %>
+    <%= link_to box.name, boxes_path(box.id), class: "box" %>
+  <% end %>
+
+  <div id="box-lists">
+  </div>
+
+  <%= form_with url: boxes_path, id:"box-form", method: :post do |f| %>
+    <%= f.text_field :name, class: "new-box-text", id: "box-text", placeholder: "入力", style: 'display:none' %>
+    <%= f.submit "追加", class: "new-submit", id: "box-submit", style: "display:none" %>
+  <% end %>
+  <div class="box" id="new-box" display="block">＋ box作成</div>
 </aside>
