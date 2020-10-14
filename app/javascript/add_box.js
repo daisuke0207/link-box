@@ -14,8 +14,7 @@ function boxAdd() {
       const box = XHR.response.box;
       const list = document.getElementById("box-lists");
       const formText = document.getElementById("box-text");
-      const HTML =  `<%= link_to ${box.name}, ${root_path}, class: "box" %>`
-
+      const HTML = `<a href = "/boxes(${box.id})" class ="box">${box.name}</a>`;
       list.insertAdjacentHTML("beforeend", HTML);
       formText.value = "";
       document.getElementById("box-text").style.display="none";

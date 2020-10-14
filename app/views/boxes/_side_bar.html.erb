@@ -1,6 +1,6 @@
 <aside class="side-bar">
   <% @boxes.each do |box| %>
-    <%= link_to box.name, root_path, class: "box" %>
+    <%= link_to box.name, boxes_path(box.id), class: "box" %>
   <% end %>
 
   <div id="box-lists">
