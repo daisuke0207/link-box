@@ -1,18 +1,24 @@
-function new_box() {
+function newBox() {
   const plus = document.getElementById("new-box");
   plus.addEventListener("click", () => {
     let box_text = document.getElementById("box-text");
-    box_text.style.display = "inline";
+    box_text.style.display = "block";
     box_text.focus();
-    document.getElementById("submit").style.display="inline";
+    document.getElementById("box-submit").style.display="block";
     document.getElementById("new-box").style.display="none";
   });
 
   function focus_out(){
-    document.getElementById("box-text").style.display="none";
-    document.getElementById("submit").style.display="none";
+    let form_text = document.getElementById("box-text");
+    form_text.value = "";
+    form_text.style.display="none";
+    document.getElementById("box-submit").style.display="none";
     document.getElementById("new-box").style.display="block";
   }
-  document.getElementById("box-text").addEventListener("blur", focus_out);
+  document.addEventListener("click", (t) => {
+    if (t.target != "box-submit") {
+      document.getElementById("box-text").addEventListener("blur", focus_out);
+    }
+  });
 }
-setInterval(new_box, 1000);
+setInterval(newBox, 1000);

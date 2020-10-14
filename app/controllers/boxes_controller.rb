@@ -1,16 +1,11 @@
 class BoxesController < ApplicationController
 
   def index
+    @boxes = Box.includes(:user)
   end
 
   def create
-    box = Box.create(box_params)
-    render json:{box: box}
-  end
-
-  private
-
-  def box_params
-    params.require(:box).permit(:name, :position).merge(user_id: current_user.id)
+    box = Box.create(name: params[:name], position: 1, user_id: current_user.id)
+    render json: { box: box }
   end
 end

@@ -18,10 +18,12 @@
 .side-bar {
   grid-area: side;
   background-color: rgb(29, 29, 29);
+  overflow: scroll;
 }
 
 /* main-layout */
 .main-page {
+  overflow: scroll;
   height: 120px;
   width: 100px;
   margin: 50px;
