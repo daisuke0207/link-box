@@ -1,6 +1,8 @@
 <aside class="side-bar">
   <% @boxes.each do |box| %>
-    <%= link_to box.name, boxes_path(box.id), class: "box" %>
+    <% if user_signed_in? && current_user == box.user %>
+      <%= link_to box.name, boxes_path(box), class: "box" %>
+    <% end %>
   <% end %>
 
   <div id="box-lists">
