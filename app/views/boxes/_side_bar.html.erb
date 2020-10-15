@@ -2,6 +2,7 @@
   <% @boxes.each do |box| %>
     <% if user_signed_in? && current_user == box.user %>
       <%= link_to box.name, boxes_path(box), class: "box" %>
+      <a >
     <% end %>
   <% end %>
 

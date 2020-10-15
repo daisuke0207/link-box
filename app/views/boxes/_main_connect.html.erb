@@ -1,4 +1,13 @@
 <main class="main-page">
-  <div class="link-title">タイトル</div>
-  <img class="image-link" src="https://source.unsplash.com/random/100x100" alt="imageです">
+  <div class="m-header">
+    <% @boxes.each do |box| %>
+      <% if user_signed_in? && current_user == box.user %>
+        <%= link_to box.name , "#", class: "b-title" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="contents">
+    <div class="image-link"><img src="https://source.unsplash.com/random/30x30" alt="imageです"></div>
+    <p class="link-title"><%= "タイトルリンク" %></p>
+  </div>
 </main>
