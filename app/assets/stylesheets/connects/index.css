@@ -42,24 +42,31 @@ main {
 }
 
 .connect-list {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.con {
   display: grid;
   grid-template-columns: 50px 1fr;
   align-items: center;
-  margin-left: 5vw;
+  margin-bottom: 40px;
+}
+
+.con:hover {
+  background-color: lightslategray;
 }
 
 .image-link {
   height: 50px;
-  margin-bottom: 30px;
 }
 
 .link-title {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
-  padding: 50px 1fr;
+  padding: 1fr;
   margin-left: 30px;
-  margin-bottom: 30px;
 }
 
 .add-connect {

@@ -9,8 +9,10 @@
 
   <div class="connect-list">
     <% @box.connects.each do |connect| %>
-      <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank　><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
-      <%= link_to connect.title, text_url_to_link(connect.link), target: :_blank, class:"link-title" %>
+      <div class="con">
+        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank　><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
+        <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank %>
+      </div>
     <% end %>
   </div>
 
