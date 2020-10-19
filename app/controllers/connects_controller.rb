@@ -11,6 +11,7 @@ class ConnectsController < ApplicationController
     if @connect.save
       redirect_to box_connects_path(@box)
     else
+      @connects = @box.connects.includes(:user)
       render :index
     end
   end
