@@ -1,7 +1,7 @@
 /* top-layout */
 
 .wrapper {
-  min-height: calc(100vh - 68px);
+  height: calc(100vh - 68px);
   display: grid;
   grid-template:
     "..... .....  .....  .....  ....." 0px
@@ -24,84 +24,17 @@ aside {
   background-color: rgb(29, 29, 29);
 }
 
-/* main-layout */
-
-main {
-  overflow: scroll;
-}
-
-.main-page {
-  background-color: rgb(43, 42, 42);
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template:
-    "..... .....    ....." 20px
-    "..... m_header ....." 50px
-    "..... .....    ....." 20px
-    "..... contents ....." 30px
-    "..... .....    ....." 20px
-    / 5vw 1fr 5vw;
-}
-
-.m-header {
-  grid-area: m_header;
-  display: grid;
-  grid-template:
-    "..... .....   ..... .....  ....." 1fr
-    "..... b_title ..... option ....." 30px
-    "..... .....   ..... .....  ....." 1fr
-    / 0px 1fr 0px 100px 0px;
-}
-
-.b-title {
-  grid-area: b_title;
-  text-decoration: none;
-  font-size: 1.3rem;
-  color: aliceblue;
-}
-
-/* .option {
-  grid-area: option;
-  text-decoration: none;
-  color: aliceblue;
-  font-size: 1.3rem;
-  text-align: end;
-} */
-
-.contents {
-  grid-area: contents;
-  display: grid;
-  grid-template:
-    "..... ..... ..... ..... ....." 0px
-    "..... l_image ..... l_title ....." 30px
-    "..... ..... ..... ..... ....." 0px
-    / 0px 30px 0px 1fr 0px;
-}
-
-.image-link {
-  grid-area: l_image;
-}
-
-.link-title {
-  grid-area: l_title;
-  color: white;
-  padding: 0px 15px;
-  font-size: 1.2rem;
-}
-
 /* side-css */
 
 .box {
   background-color: rgba(211, 211, 211, 0.212);
   color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 10%;
   text-decoration: none;
-  text-align: center;
   height: 50px;
+  opacity: 0.7;
 }
 
 .box:hover {

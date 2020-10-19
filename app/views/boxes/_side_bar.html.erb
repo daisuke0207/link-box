@@ -1,8 +1,7 @@
 <aside class="side-bar">
-  <% @boxes.each do |box| %>
-    <% if user_signed_in? && current_user == box.user %>
-      <%= link_to box.name, boxes_path(box), class: "box" %>
-      <a >
+  <% if user_signed_in? %>
+    <% current_user.boxes.each do |box| %>
+      <%= link_to box.name, box_connects_path(box), class: "box" %>
     <% end %>
   <% end %>
 
@@ -15,3 +14,6 @@
   <% end %>
   <div class="box" id="new-box" display="block">＋ box作成</div>
 </aside>
+
+
+

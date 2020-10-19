@@ -1,0 +1,22 @@
+<main class="main-page">
+  <header class="m-header">
+    <% if user_signed_in? && current_user == @box.user %>
+      <div class = "b-title"><%= @box.name %></div>
+      <div class = "all-open">すべて開く</div>
+      <%= link_to "編集", root_path, class: "box-edit" %>
+    <% end %>
+  </header>
+
+  <div class="connect-list">
+    <% @box.connects.each do |connect| %>
+      <a class = "image-link" href="<%= text_url_to_link(connect.link).html_safe %>" target=_blank><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link).html_safe %>" style="width:50px; height:50px"></a>
+      <%= link_to connect.title, text_url_to_link(connect.link).html_safe, target: :_blank, class:"link-title" %>
+    <% end %>
+  </div>
+
+  <%= form_with url: box_connects_path, method: :post, class: "connect-form", id: "connect-form" do |f| %>
+    <%= f.text_field :title, class: "connect-title", id: "connect-title-id", placeholder: "タイトル", style: "display:none" %>
+    <%= f.text_field :link, class: "connect-link", id: "connect-link-id", placeholder: "リンク入力", style: "display:none" %>
+  <% end %>
+  <p class ="add-connect", id ="add-connect-id">+ link create</p>
+</main>
