@@ -1,5 +1,5 @@
 function boxAdd() {
-  const add_box = document.getElementById("box-submit");
+  const add_box = document.getElementById("box-submit-id");
   add_box.addEventListener("click", (e) => {
     const formData = new FormData(document.getElementById("box-form"));
     const XHR = new XMLHttpRequest();
@@ -18,7 +18,7 @@ function boxAdd() {
       list.insertAdjacentHTML("beforeend", HTML);
       formText.value = "";
       document.getElementById("box-text").style.display="none";
-      document.getElementById("box-submit").style.display="none";
+      document.getElementById("box-submit-id").style.display="none";
       document.getElementById("new-box").style.display="block";
     };
     e.preventDefault();
