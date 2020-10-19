@@ -1,4 +1,4 @@
-function connectAdd() {
+function connectBtn() {
   const btn = document.getElementById("add-connect-id");
   btn.addEventListener("click", () => {
     const con_title = document.getElementById("connect-title-id");
@@ -10,4 +10,4 @@ function connectAdd() {
     btn.style.display="none";
   });
 }
-setInterval(connectAdd, 1000);
+setInterval(connectBtn, 1000);
