@@ -1,0 +1,106 @@
+/* main-layout */
+
+main {
+  overflow: scroll;
+}
+
+.main-page {
+  background-color: rgb(43, 42, 42);
+  height: 100%;
+  width: 100%;
+}
+
+.m-header {
+  display: grid;
+  grid-template:
+    "..... .....   ..... .....    ..... .....    ....." 30px
+    "..... b_title ..... all_open ..... box_edit ....." 50px
+    "..... .....   ..... .....    ..... .....    ....." 30px
+    / 5vw auto 50px auto 1fr auto 5vw;
+  align-items: center;
+}
+
+.b-title {
+  grid-area: b_title;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.all-open {
+  grid-area: all_open;
+  color: white;
+  opacity: 0.7;
+}
+
+.box-edit {
+  grid-area: box_edit;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+}
+
+.connect-list {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.con {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.con:hover {
+  background-color: lightslategray;
+}
+
+.image-link {
+  height: 50px;
+}
+
+.link-title {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 1fr;
+  margin-left: 30px;
+}
+
+.add-connect {
+  color: white;
+  font-size: 1.3rem;
+  align-items: center;
+  margin-left: 5vw;
+  opacity: 0.7;
+  margin-bottom: 300px;
+}
+
+.connect-form {
+  color: white;
+  align-items: center;
+  margin-left: 5vw;
+  opacity: 0.7;
+}
+
+.connect-title {
+  width: 300px;
+  height: 50px;
+}
+
+.connect-link {
+  width: 300px;
+  height: 50px;
+}
+
+.connect-submit {
+  margin-bottom: 300px;
+  width: 300px;
+  height: 40px;
+}
+
+.add-connect:hover {
+  cursor: pointer;
+}

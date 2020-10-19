@@ -1,0 +1,26 @@
+<main class="main-page">
+  <header class="m-header">
+    <% if user_signed_in? && current_user == @box.user %>
+      <div class = "b-title"><%= @box.name %></div>
+      <div class = "all-open">すべて開く</div>
+      <%= link_to "編集", root_path, class: "box-edit" %>
+    <% end %>
+  </header>
+
+  <div class="connect-list">
+    <% @box.connects.each do |connect| %>
+      <div class="con">
+        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank　><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
+        <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= form_with model: [@box, @connect], class: "connect-form", id: "connect-form", local: true do |f| %>
+    <%= f.text_field :title, class: "connect-title", id: "connect-title-id", placeholder: "タイトル", style: "display:none" %>
+    <%= f.text_field :link, class: "connect-link", id: "connect-link-id", placeholder: "URL", style: "display:none" %>
+    <%= f.submit "追加", class: "connect-submit", id: "connect-submit-id", style: "display:none" %>
+    <%= f.hidden_field :position, value: 1 %>
+  <% end %>
+  <div class ="add-connect" id ="add-connect-id" style="display:block">+ link create</div>
+</main>

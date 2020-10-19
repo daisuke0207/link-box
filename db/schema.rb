@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_052359) do
+ActiveRecord::Schema.define(version: 2020_10_15_054419) do
 
   create_table "boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 2020_10_12_052359) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_boxes_on_user_id"
+  end
+
+  create_table "connects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "link", null: false
+    t.integer "position", null: false
+    t.bigint "user_id"
+    t.bigint "box_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["box_id"], name: "index_connects_on_box_id"
+    t.index ["user_id"], name: "index_connects_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -35,4 +47,6 @@ ActiveRecord::Schema.define(version: 2020_10_12_052359) do
   end
 
   add_foreign_key "boxes", "users"
+  add_foreign_key "connects", "boxes"
+  add_foreign_key "connects", "users"
 end

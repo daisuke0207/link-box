@@ -17,6 +17,7 @@
 
 .nav:not(.title) {
   color: white;
+  opacity: 0.7;
 }
 
 .nav:hover {
