@@ -31,13 +31,13 @@ RSpec.describe Connect, type: :model do
     it 'userが空では登録できないこと' do
       @connect.user = nil
       @connect.valid?
-      expect(@connect.errors.full_messages).to include("User must exist")
+      expect(@connect.errors.full_messages).to include('User must exist')
     end
 
     it 'boxが空では登録できないこと' do
       @connect.box = nil
       @connect.valid?
-      expect(@connect.errors.full_messages).to include("Box must exist")
+      expect(@connect.errors.full_messages).to include('Box must exist')
     end
   end
 end

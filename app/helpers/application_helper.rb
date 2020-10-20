@@ -1,8 +1,8 @@
 module ApplicationHelper
-  require "uri"
+  require 'uri'
 
   def text_url_to_link(text)
-    URI.extract(text, ["http", "https"]).uniq.each do |url|
+    URI.extract(text, %w[http https]).uniq.each do |url|
       text.gsub!(url)
     end
     text
