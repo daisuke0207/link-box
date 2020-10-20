@@ -24,12 +24,12 @@ function formExit() {
     if ((e.target === e_addBtn) || (e.target === e_title) || (e.target === e_link) || (e.target === e_sub)) {
       return null;
     }
-    e_title.value = "";
-    e_link.value = "";
     e_title.style.display="none";
     e_link.style.display="none";
     e_sub.style.display="none";
     e_addBtn.style.display="block";
+    e_title.value = "";
+    e_link.value = "";
   });
 }
-window.addEventListener("load", addConnect);
+setInterval(addConnect, 1000);

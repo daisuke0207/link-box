@@ -1,0 +1,5 @@
+<%= form_with model: @box, local: true do |f| %>
+  <%= f.text_field :name, placeholder: "リスト名入力" %>
+  <%= f.submit "更新" %>
+<% end %>
+<%= link_to "削除", box_path, method: :delete %>
