@@ -49,8 +49,8 @@ main {
 .con {
   display: grid;
   grid-template-columns: 50px 1fr;
+  grid-template-rows: 100px;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .con:hover {
