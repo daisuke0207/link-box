@@ -1,0 +1,39 @@
+.up-box-form {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 50px 50px;
+  justify-content: center;
+  margin-top: 100px;
+  row-gap: 10px;
+}
+
+.up-box {
+  background-color: grey;
+  color: white;
+}
+
+.up-box::placeholder {
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.up-box-submit {
+  background-color: gray;
+  color: white;
+}
+
+.box-delete {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  background-color: gray;
+  justify-content: center;
+  margin: 50px auto 10px auto;
+  align-items: center;
+}
+
+.box-delete-in {
+  text-decoration: none;
+  color: white;
+}
