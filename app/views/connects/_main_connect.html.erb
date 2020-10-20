@@ -17,7 +17,7 @@
   </div>
 
   <%= form_with model: [@box, @connect], class: "connect-form", id: "connect-form", local: true do |f| %>
-    <%= f.text_field :title, class: "connect-title", id: "connect-title-id", placeholder: "タイトル", style: "display:none" %>
+    <%= f.text_field :title, class: "connect-title", id: "connect-title-id", placeholder: "タイトル", style: "display:none", maxlength:"20" %>
     <%= f.text_field :link, class: "connect-link", id: "connect-link-id", placeholder: "URL", style: "display:none" %>
     <%= f.submit "追加", class: "connect-submit", id: "connect-submit-id", style: "display:none" %>
     <%= f.hidden_field :position, value: 1 %>

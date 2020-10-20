@@ -1,5 +1,7 @@
-<%= form_with model: @box, local: true do |f| %>
-  <%= f.text_field :name, placeholder: "リスト名入力" %>
-  <%= f.submit "更新" %>
+<%= render "shared/single-header"%>
+<%= form_with model: @box, class: "up-box-form", local: true do |f| %>
+  <%= f.text_field :name, placeholder: "リスト名入力（20字以内）", class: "up-box", maxlength:"20"; %>
+  <%= f.hidden_field :position, value: 1%>
+  <%= f.submit "更新", class: "up-box-submit" %>
 <% end %>
-<%= link_to "削除", box_path, method: :delete %>
+<div class = "box-delete"><%= link_to "リスト削除", box_path, method: :delete, class: "box-delete-in" %></div>
