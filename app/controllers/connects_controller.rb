@@ -16,6 +16,16 @@ class ConnectsController < ApplicationController
     end
   end
 
+  def destroy
+    connect = Connect.find(params[:id])
+    box = Box.find(params[:box_id])
+    if connect.destroy
+      redirect_to box_connects_path(box)
+    else
+      render box_connects_path(box)
+    end
+  end
+
   private
 
   def connect_params

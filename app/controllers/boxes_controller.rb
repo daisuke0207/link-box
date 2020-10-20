@@ -14,9 +14,9 @@ class BoxesController < ApplicationController
   end
 
   def update
-    @box = Box.find(params[:id])
-    if @box.update(box_params)
-      redirect_to box_connects_path(@box)
+    box = Box.find(params[:id])
+    if box.update(box_params)
+      redirect_to box_connects_path(box)
     else
       render :edit
     end
