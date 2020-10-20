@@ -3,7 +3,7 @@
     <% if user_signed_in? && current_user == @box.user %>
       <div class = "b-title"><%= @box.name %></div>
       <div class = "all-open">すべて開く</div>
-      <%= link_to "編集", root_path, class: "box-edit" %>
+      <%= link_to "編集", edit_box_path(@box.id), class: "box-edit" %>
     <% end %>
   </header>
 
