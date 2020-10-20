@@ -41,6 +41,10 @@ main {
   opacity: 0.7;
 }
 
+.box-edit:hover {
+  color: black;
+}
+
 .connect-list {
   margin-left: 5vw;
   margin-right: 5vw;
@@ -48,7 +52,7 @@ main {
 
 .con {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 100px;
   align-items: center;
 }
@@ -65,8 +69,18 @@ main {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
-  padding: 1fr;
   margin-left: 30px;
+}
+
+.con-delete {
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.con-delete:hover {
+  color: black;
 }
 
 .add-connect {
