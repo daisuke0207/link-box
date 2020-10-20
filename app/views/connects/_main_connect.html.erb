@@ -1,6 +1,6 @@
 <main class="main-page">
   <header class="m-header">
-    <% if user_signed_in? && current_user == @box.user %>
+    <% if user_signed_in? && current_user.id == @box.user.id %>
       <div class = "b-title"><%= @box.name %></div>
       <div class = "all-open">すべて開く</div>
       <%= link_to "編集", edit_box_path(@box.id), class: "box-edit" %>

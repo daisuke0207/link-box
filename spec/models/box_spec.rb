@@ -25,7 +25,7 @@ RSpec.describe Box, type: :model do
     it 'userが空では登録できないこと' do
       @box.user = nil
       @box.valid?
-      expect(@box.errors.full_messages).to include("User must exist")
+      expect(@box.errors.full_messages).to include('User must exist')
     end
   end
 end

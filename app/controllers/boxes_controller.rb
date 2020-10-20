@@ -1,4 +1,5 @@
 class BoxesController < ApplicationController
+  before_action :move_to_session, only: [:edit]
 
   def index
     @boxes = Box.includes(:user)
@@ -11,6 +12,7 @@ class BoxesController < ApplicationController
 
   def edit
     @box = Box.find(params[:id])
+    move_to_root
   end
 
   def update
@@ -35,5 +37,13 @@ class BoxesController < ApplicationController
 
   def box_params
     params.require(:box).permit(:name, :position).merge(user_id: current_user.id)
+  end
+
+  def move_to_session
+    redirect_to new_user_session_path unless user_signed_in?
+  end
+
+  def move_to_root
+    redirect_to root_path unless current_user.id == @box.user.id
   end
 end
