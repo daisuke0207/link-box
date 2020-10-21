@@ -28,7 +28,7 @@ aside {
 
 .box {
   background-color: rgb(29, 29, 29);
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   padding: 10px 10%;
