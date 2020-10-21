@@ -3,6 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true
-  has_many :connects
-  has_many :boxes
+  has_many :connects, dependent: :destroy
+  has_many :boxes, dependent: :destroy
 end

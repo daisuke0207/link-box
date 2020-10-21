@@ -32,6 +32,7 @@ main {
   grid-area: all_open;
   color: white;
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .box-edit {

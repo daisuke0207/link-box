@@ -1,6 +1,10 @@
-function boxAdd() {
+function subBtn() {
   const add_box = document.getElementById("box-submit-id");
-  add_box.addEventListener("click", (e) => {
+  if (add_box.getAttribute("data-load") != null ) {
+    return null;
+  }
+  add_box.setAttribute("data-load", "true");
+  add_box.addEventListener("click", function boxAdd(e){
     const formData = new FormData(document.getElementById("box-form"));
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/boxes", true);
@@ -13,15 +17,17 @@ function boxAdd() {
       }
       const box = XHR.response.box;
       const list = document.getElementById("box-lists");
-      const formText = document.getElementById("box-text");
       const HTML = `<a href = "/boxes/${box.id}/connects" class ="box">${box.name}</a>`;
       list.insertAdjacentHTML("beforeend", HTML);
+      const formText = document.getElementById("box-text");
+      const formBtn = document.getElementById("box-submit-id");
+      const newBtn = document.getElementById("new-box");
+      formText.style.display="none";
       formText.value = "";
-      document.getElementById("box-text").style.display="none";
-      document.getElementById("box-submit-id").style.display="none";
-      document.getElementById("new-box").style.display="block";
+      formBtn.style.display="none";
+      newBtn.style.display="block";
     };
     e.preventDefault();
   });
 }
-window.addEventListener("load", boxAdd);
+setInterval(subBtn, 1000);

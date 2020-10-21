@@ -10,6 +10,7 @@
 
   <%= form_with url: boxes_path, id:"box-form", method: :post do |f| %>
     <%= f.text_field :name, class: "new-box-text", id: "box-text", placeholder: "10文字以内で入力", style: 'display:none', maxlength:"10" %>
+    <%= f.hidden_field :position, value: 1 %>
     <%= f.submit "追加", class: "box-submit", id: "box-submit-id", style: "display:none" %>
   <% end %>
   <% if user_signed_in? %>
