@@ -6,7 +6,7 @@ class BoxesController < ApplicationController
   end
 
   def create
-    box = Box.create(name: params[:name], position: 1, user_id: current_user.id)
+    box = Box.create(name: params[:name], position: params[:position], user_id: current_user.id)
     render json: { box: box }
   end
 

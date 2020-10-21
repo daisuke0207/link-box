@@ -16,10 +16,10 @@ function boxAdd() {
       const formText = document.getElementById("box-text");
       const HTML = `<a href = "/boxes/${box.id}/connects" class ="box">${box.name}</a>`;
       list.insertAdjacentHTML("beforeend", HTML);
-      formText.value = "";
       document.getElementById("box-text").style.display="none";
       document.getElementById("box-submit-id").style.display="none";
       document.getElementById("new-box").style.display="block";
+      formText.value = "";
     };
     e.preventDefault();
   });
