@@ -1,0 +1,15 @@
+.first-visit {
+  grid-area: main;
+  text-align: center;
+  background-color: rgba(230, 230, 230, 0.788);
+}
+
+.top-description {
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+.first-visit img {
+  margin-top: 50px;
+  width: 80%;
+}
