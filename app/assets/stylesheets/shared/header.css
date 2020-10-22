@@ -1,5 +1,4 @@
 .top-page-header {
-  background-color: black;
   height: 68px;
   width: 100%;
   display: grid;
@@ -16,7 +15,7 @@
 }
 
 .nav:not(.title) {
-  color: white;
+  color: black;
   opacity: 0.7;
 }
 

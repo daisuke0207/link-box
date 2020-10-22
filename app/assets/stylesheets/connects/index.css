@@ -6,7 +6,7 @@ main {
 }
 
 .main-page {
-  background-color: rgb(43, 42, 42);
+  background-color: whitesmoke;
 }
 
 .m-header {
@@ -23,13 +23,13 @@ main {
   grid-area: b_title;
   text-decoration: none;
   font-size: 1.5rem;
-  color: aliceblue;
+  color: black;
   font-weight: bold;
 }
 
 .all-open {
   grid-area: all_open;
-  color: white;
+  color: black;
   opacity: 0.7;
   cursor: pointer;
 }
@@ -37,12 +37,12 @@ main {
 .box-edit {
   grid-area: box_edit;
   text-decoration: none;
-  color: white;
+  color: black;
   opacity: 0.7;
 }
 
 .box-edit:hover {
-  color: black;
+  color: lightpink;
 }
 
 .connect-list {
@@ -58,7 +58,7 @@ main {
 }
 
 .con:hover {
-  background-color: lightslategray;
+  background-color: lightgray;
 }
 
 .image-link {
@@ -67,36 +67,32 @@ main {
 
 .link-title {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 1.3rem;
   margin-left: 30px;
 }
 
 .con-delete {
   text-decoration: none;
-  color: white;
+  color: black;
   opacity: 0.7;
   text-align: right;
 }
 
 .con-delete:hover {
-  color: black;
+  color: lightpink;
 }
 
 .add-connect {
   margin: 30px 5vw 300px 5vw;
-  color: white;
+  color: black;
   font-size: 1.3rem;
   opacity: 0.7;
   cursor: pointer;
 }
 
-.add-connect:hover {
-  background-color: rgb(82, 142, 253);
-}
-
 .connect-form {
-  color: white;
+  color: black;
   align-items: center;
   margin-left: 5vw;
   opacity: 0.7;
@@ -120,4 +116,6 @@ main {
 
 .add-connect:hover {
   cursor: pointer;
+  /* background-color: rgb(82, 142, 253); */
+  background-color: lightgray;
 }

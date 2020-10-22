@@ -21,14 +21,14 @@ aside {
 
 .side-bar {
   grid-area: side;
-  background-color: rgb(29, 29, 29);
+  background-color: whitesmoke;
 }
 
 /* side-css */
 
 .box {
-  background-color: rgb(29, 29, 29);
-  color: rgb(255, 255, 255);
+  background-color: rgb(233, 233, 233);
+  color: black;
   display: flex;
   align-items: center;
   padding: 10px 10%;
@@ -42,7 +42,7 @@ aside {
 }
 
 .box:hover {
-  background-color: lightslategray;
+  background-color: lightgray;
   cursor: pointer;
 }
 
