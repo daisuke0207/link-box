@@ -1,7 +1,6 @@
 /* top-layout */
 
 .wrapper {
-  height: calc(100vh - 68px);
   display: grid;
   grid-template:
     "..... .....  .....  .....  ....." 0px
@@ -17,6 +16,7 @@
 
 aside {
   overflow: scroll;
+  height: 100vh;
 }
 
 .side-bar {

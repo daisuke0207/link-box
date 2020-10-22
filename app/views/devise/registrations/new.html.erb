@@ -3,7 +3,7 @@
   <h1 class="form-header-text">新規会員登録</h1>
   <%= render "shared/error_messages", model: f.object, locals: {resource: @user} %>
   <label class="form-text", for="nickname">ニックネーム<span class="indispensable">必須</span></label>
-  <%= f.text_field :nickname, class: "form-input", id:"nickname", placeholder: "ニックネームを入力", maxlength: "20" %>
+  <%= f.text_field :nickname, class: "form-input", id:"nickname", placeholder: "ニックネームを入力", maxlength: "20", autofocus: true %>
   <label class="form-text", for="email">メールアドレス<span class="indispensable">必須</span></label>
   <%= f.email_field :email, class: "form-input", id:"email", placeholder:"メールアドレスを入力" %>
   <label class="form-text", for="password">パスワード<span class="indispensable">必須</span></label>
