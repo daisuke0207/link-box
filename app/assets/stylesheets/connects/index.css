@@ -22,7 +22,7 @@ main {
 .b-title {
   grid-area: b_title;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: black;
   font-weight: bold;
 }

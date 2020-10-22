@@ -10,10 +10,10 @@ function newBox() {
 
   document.addEventListener('click', (e) => {
     let t = e.target;
-    const item1 = document.getElementById("box-submit-id");
-    const item2 = document.getElementById("new-box");
-    const item3 = document.getElementById("box-text");
-    if (t === item1 || t === item2 || t === item3) {
+    const submitBtn = document.getElementById("box-submit-id");
+    const newBtn = document.getElementById("new-box");
+    const boxText = document.getElementById("box-text");
+    if (t === submitBtn || t === newBtn || t === boxText) {
       return null;
     }
     focusOut();
