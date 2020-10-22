@@ -2,11 +2,11 @@
 
 main {
   overflow: scroll;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-page {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .m-header {
