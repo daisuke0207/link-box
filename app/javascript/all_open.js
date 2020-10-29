@@ -6,7 +6,7 @@ function getBtn() {
 
 // すべてのリンクを開く
 function allOpen() {
-  let allItems = document.querySelectorAll(".link-title");
+  const allItems = document.querySelectorAll(".link-title");
   allItems.forEach(a => {
     window.open(a);
   });
