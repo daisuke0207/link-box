@@ -2,7 +2,7 @@
   <header class="m-header">
     <% if user_signed_in? && current_user.id == @box.user.id %>
       <div class = "b-title"><%= @box.name %></div>
-      <div class = "all-open", id = "all-open-id">すべて開く</div>
+      <div class = "all-open", id = "all-open-id">すべて開く：<%= @box.connects.length %></div>
       <%= link_to "編集", edit_box_path(@box.id), class: "box-edit" %>
     <% end %>
   </header>
