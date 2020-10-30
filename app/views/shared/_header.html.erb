@@ -1,6 +1,5 @@
 <header class="top-page-header">
   <%= link_to "Link", root_path, class: "nav title" %>
-  <div class="nav box-view">リスト</div>
   <% if user_signed_in? %>
     <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>

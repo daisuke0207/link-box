@@ -14,15 +14,11 @@
   background-color: white;
 }
 
-aside {
-  overflow: scroll;
-  height: 100%;
-  border-right: 1px solid rgb(240, 240, 240);
-}
-
 .side-bar {
+  height: 100%;
   grid-area: side;
   background-color: white;
+  border-right: 1px solid rgb(240, 240, 240);
 }
 
 /* side-css */
