@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 def basic_pass(path)
-  username = ENV["AUTH_USER"] 
-  password = ENV["AUTH_PASSWORD"]
+  username = ENV['AUTH_USER']
+  password = ENV['AUTH_PASSWORD']
   visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
 end
 
