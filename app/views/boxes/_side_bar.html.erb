@@ -1,4 +1,4 @@
-<aside class="side-bar">
+<aside class="side-bar", id="side-bar">
   <% if user_signed_in? %>
     <% current_user.boxes.each do |box| %>
       <%= link_to box.name, box_connects_path(box), class: "box" %>

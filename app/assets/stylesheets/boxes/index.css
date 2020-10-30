@@ -21,6 +21,10 @@
   border-right: 1px solid rgb(240, 240, 240);
 }
 
+.side-exit {
+  overflow: hidden;
+}
+
 /* side-css */
 
 .box {
