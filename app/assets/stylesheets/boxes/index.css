@@ -11,7 +11,9 @@
 
 .main-page {
   grid-area: main;
+  height: 100%;
   background-color: white;
+  overflow: scroll;
 }
 
 .side-bar {
@@ -19,6 +21,7 @@
   grid-area: side;
   background-color: white;
   border-right: 1px solid rgb(240, 240, 240);
+  overflow: scroll;
 }
 
 .side-exit {

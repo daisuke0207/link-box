@@ -1,4 +1,4 @@
-function subBtn() {
+function submitBtn() {
   const add_box = document.getElementById("box-submit-id");
   if (add_box.getAttribute("data-load") != null ) {
     return null;
@@ -30,4 +30,4 @@ function subBtn() {
     e.preventDefault();
   });
 }
-setInterval(subBtn, 1000);
+setInterval(submitBtn, 1000);

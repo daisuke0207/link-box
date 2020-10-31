@@ -1,14 +1,5 @@
 /* main-layout */
 
-main {
-  overflow: scroll;
-  height: 100%;
-}
-
-.main-page {
-  background-color: white;
-}
-
 .m-header {
   display: grid;
   grid-template:
@@ -53,7 +44,7 @@ main {
 .con {
   display: grid;
   grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 100px;
+  grid-template-rows: 80px;
   align-items: center;
 }
 
@@ -63,6 +54,7 @@ main {
 
 .image-link {
   height: 50px;
+  cursor: pointer;
 }
 
 .link-title {
