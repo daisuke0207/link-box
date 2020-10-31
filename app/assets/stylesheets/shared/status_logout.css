@@ -1,7 +1,8 @@
 .first-visit {
-  grid-area: main;
+  height: calc(100vh - 68px);
+  width: 100vw;
   text-align: center;
-  background-color: rgba(230, 230, 230, 0.788);
+  background-color: rgba(230, 230, 230, 0.185);
 }
 
 .top-description {
@@ -10,6 +11,6 @@
 }
 
 .first-visit img {
-  margin-top: 50px;
-  width: 80%;
+  width: 70vw;
+  margin-top: 70px;
 }

@@ -1,10 +1,11 @@
 <%= render "shared/header" %>
 <div class="wrapper">
-  <%= render "side_bar"%>
   <div class="first-visit">
     <% unless user_signed_in? %>
       <div class="top-description">よく開くリンクを管理しよう</div>
       <%= image_tag "sample.png" %>
+    <% else %>
+      <%= render "side_bar"%>
     <% end %>
   </div>
 </div>
