@@ -5,9 +5,9 @@
   display: grid;
   grid-template:
     "..... ..... ..... ..... ..... ..... ..... ..... ....."
-    "..... title ..... box   ..... left  ..... right ....." 100%
+    "..... menu ..... title   ..... left  ..... right ....." 100%
     "..... ..... ..... ..... ..... ..... ..... ..... ....."
-    /5vw auto 40px auto 1fr auto 30px auto 5vw;
+    /1.2vw 0px 50px auto 1fr auto 30px auto 5vw;
   align-items: center;
 }
 
@@ -31,8 +31,9 @@
   color: red;
 }
 
-.box-view {
-  grid-area: box;
+.side-view {
+  grid-area: menu;
+  opacity: 0.5;
 }
 
 .login {
