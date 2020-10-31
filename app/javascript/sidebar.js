@@ -1,20 +1,19 @@
-window.addEventListener("load", () => {
+function sideStatus() {
   const sideBtn = document.getElementById("side-view");
+  if (sideBtn.getAttribute("data-load") != null ) {
+    return null;
+  }
+  sideBtn.setAttribute("data-load", "true");
+  let bool = false;
   sideBtn.addEventListener("click", () => {
-    const sideBar = document.getElementById("side-bar");
-    sideBar.className="side-exit";
+    const side_status = document.getElementById("side-bar");
+    if (bool) {
+      side_status.className="side-bar";
+      bool = false;
+    } else {
+      side_status.className="side-exit";
+      bool = true;
+    }
   });
-});
-
-// function sideStatus() {
-
-// }
-
-// function sideOpen() {
-
-// }
-
-// function sideExit() {
-
-// }
-// window.addEventListener("load", sideStatus);
+}
+setInterval(sideStatus, 1000);
