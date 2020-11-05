@@ -1,5 +1,7 @@
 <header class="top-page-header">
-  <%= image_tag 'hamburger-menu.svg', class: "side-view", id: "side-view" %>
+  <% if user_signed_in? %>
+    <%= image_tag 'hamburger-menu.svg', class: "side-view", id: "side-view" %>
+  <% end %>
   <%= link_to "Link", root_path, class: "nav title" %>
   <% if user_signed_in? %>
     <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
