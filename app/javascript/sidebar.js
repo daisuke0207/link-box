@@ -2,32 +2,38 @@
 function sideStatus() {
   if (document.URL.match(/boxes/)) {
     const sideBtn = document.getElementById("side-view");
-    if (sideBtn.getAttribute("data-load") != null ) {
+    if (load(sideBtn)) {
       return null;
     }
     sideBtn.setAttribute("data-load", "true");
     let bool = false;
     sideBtn.addEventListener("click", () => {
-      const side_status = document.getElementById("side-bar");
+      const side = document.getElementById("side-bar");
       if (bool) {
-        open(side_status);
+        open(side);
         bool = false;
       } else {
-        close(side_status);
+        close(side);
         bool = true;
       }
     });
   }
 }
 
+function load(params) {
+  if (params.getAttribute("data-load") != null) {
+    return true;
+  }
+}
+
 // サイドバーを開く
-function open(status){
-  status.className="side-bar";
+function open(element){
+  element.className="side-bar";
 }
 
 // サイドバー閉じる
-function close(status) {
-  status.className="side-close";
+function close(element) {
+  element.className="side-close";
 }
 
 setInterval(sideStatus, 1000);
