@@ -1,7 +1,6 @@
 class Box < ApplicationRecord
-  
   def attributes
-    {id: nil, name: nil}
+    { id: nil, name: nil }
   end
 
   validates :name, :position, presence: true

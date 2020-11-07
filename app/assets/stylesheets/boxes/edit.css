@@ -12,15 +12,9 @@
   color: grey;
 }
 
-.up-box {
-}
-
 .up-box::placeholder {
   opacity: 0.5;
   text-align: center;
-}
-
-.up-box-submit {
 }
 
 .box-delete {
