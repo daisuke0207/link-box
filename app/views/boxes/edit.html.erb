@@ -5,4 +5,5 @@
   <%= f.hidden_field :position, value: 1%>
   <%= f.submit "更新", class: "up-box-submit" %>
 <% end %>
-<div class = "box-delete"><%= link_to "リスト削除", box_path, method: :delete, class: "box-delete-in" %></div>
+<div class = "box-delete"><%= link_to "全てのリンク削除", destroy_all_box_connects_path(@box.id), method: :delete, class: "box-delete-in" %></div>
+<div class = "box-delete"><%= link_to "グループを削除", box_path, method: :delete, class: "box-delete-in" %></div>
