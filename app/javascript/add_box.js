@@ -6,6 +6,10 @@ function submitBtn() {
   add_box.setAttribute("data-load", "true");
   add_box.addEventListener("click", function boxAdd(e){
     const formData = new FormData(document.getElementById("box-form"));
+    const name = document.getElementById("box-text").value;
+    if (name == "") {
+      return null;
+    }
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/boxes", true);
     XHR.responseType = "json";
