@@ -1,5 +1,5 @@
 .first-visit {
-  height: 100%;
+  height: calc(100vh - 68px);
   width: 100vw;
   text-align: center;
   background-color: rgb(230, 230, 230);
