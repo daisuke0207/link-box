@@ -1,11 +1,17 @@
 function addConnect() {
   const con_sub = document.getElementById("connect-submit-id");
-  con_sub.addEventListener("click", () => {
+  con_sub.addEventListener("click", (e) => {
+    e.preventDefault();
+    const con_form = document.getElementById("connect-form");
     const title = document.getElementById("connect-title-id");
     const link = document.getElementById("connect-link-id");
     const sub = document.getElementById("connect-submit-id");
     const addBtn = document.getElementById("add-connect-id");
-
+    if (title.value == "" || link.value == "") {
+      console.log(title.value);
+      return null;
+    }
+    con_form.submit();
     title.style.display="none";
     link.style.display="none";
     sub.style.display="none";
