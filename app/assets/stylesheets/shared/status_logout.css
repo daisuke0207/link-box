@@ -1,16 +1,17 @@
 .first-visit {
-  height: calc(100vh - 68px);
+  height: 100%;
   width: 100vw;
   text-align: center;
-  background-color: rgba(230, 230, 230, 0.185);
+  background-color: rgb(230, 230, 230);
 }
 
 .top-description {
   margin-top: 50px;
+  margin-bottom: 70px;
   font-size: 2rem;
 }
 
 .first-visit img {
   width: 70vw;
-  margin-top: 70px;
+  margin-bottom: 70px;
 }
