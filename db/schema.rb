@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(version: 2020_11_12_074437) do
   end
 
   create_table "deletehistories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "connect_id"
+    t.string "title", null: false
+    t.string "link", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["connect_id"], name: "index_deletehistories_on_connect_id"
     t.index ["user_id"], name: "index_deletehistories_on_user_id"
   end
 
@@ -58,6 +58,5 @@ ActiveRecord::Schema.define(version: 2020_11_12_074437) do
   add_foreign_key "boxes", "users"
   add_foreign_key "connects", "boxes"
   add_foreign_key "connects", "users"
-  add_foreign_key "deletehistories", "connects"
   add_foreign_key "deletehistories", "users"
 end
