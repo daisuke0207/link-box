@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   has_many :connects, dependent: :destroy
   has_many :boxes, dependent: :destroy
+  has_many :deletehistory, dependent: :destroy
 end
