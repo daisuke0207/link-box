@@ -1,0 +1,2 @@
+class Deletehistory < ApplicationRecord
+end
