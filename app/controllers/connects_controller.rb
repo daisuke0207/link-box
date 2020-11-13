@@ -62,8 +62,11 @@ class ConnectsController < ApplicationController
     new_history.title = connect.title
     new_history.link = connect.link
 
+    if Deletehistory.find_by(link: new_history.link)
+      old_history = Deletehistory.find_by(link: new_history.link)
+      old_history.destroy
+    end
     new_history.save
-
     histories_stock_limit = 10
     histories = Deletehistory.all
     if histories.count > histories_stock_limit
