@@ -61,7 +61,7 @@ class BoxesController < ApplicationController
         old_history.destroy
       end
       new_history.save
-      histories_stock_limit = 10
+      histories_stock_limit = 20
       histories = Deletehistory.all
       if histories.count > histories_stock_limit
         histories[0].destroy
