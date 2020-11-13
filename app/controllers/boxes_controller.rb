@@ -26,6 +26,8 @@ class BoxesController < ApplicationController
 
   def destroy
     box = Box.find(params[:id])
+    connects = box.connects
+    destroy_all_history(connects)
     if box.destroy
       redirect_to root_path
     else
@@ -45,5 +47,25 @@ class BoxesController < ApplicationController
 
   def move_to_root
     redirect_to root_path unless current_user.id == @box.user.id
+  end
+
+  def destroy_all_history(connects)
+    connects.each do |connect|
+      new_history = Deletehistory.new
+      new_history.user_id = current_user.id
+      new_history.title = connect.title
+      new_history.link = connect.link
+  
+      if Deletehistory.find_by(link: new_history.link)
+        old_history = Deletehistory.find_by(link: new_history.link)
+        old_history.destroy
+      end
+      new_history.save
+      histories_stock_limit = 10
+      histories = Deletehistory.all
+      if histories.count > histories_stock_limit
+        histories[0].destroy
+      end
+    end
   end
 end

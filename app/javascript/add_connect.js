@@ -8,7 +8,6 @@ function addConnect() {
     const sub = document.getElementById("connect-submit-id");
     const addBtn = document.getElementById("add-connect-id");
     if (title.value == "" || link.value == "") {
-      console.log(title.value);
       return null;
     }
     con_form.submit();
