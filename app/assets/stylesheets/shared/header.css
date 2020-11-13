@@ -34,6 +34,7 @@
 
 .delete-recent {
   grid-area: trash;
+  margin-top: 6px;
 }
 
 .delete-recent:hover .delete-history {
