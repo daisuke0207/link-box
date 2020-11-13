@@ -4,7 +4,16 @@
   <% end %>
   <%= link_to "Link", root_path, class: "nav title" %>
   <% if user_signed_in? %>
-    <%= image_tag 'trash.svg' ,class: "delete-recent nav" %>
+    <div class="delete-recent"><%= image_tag 'trash.svg' ,class: "nav" %>
+      <ul class="delete-history">
+        <% delete_history_get.each do |history| %>
+        <div class="del-lists">
+          <li><a class = "del-image-link" href= "<%= text_url_to_link(history.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(history.link) %>"></a></li>
+          <li><%= link_to history.title, text_url_to_link(history.link), class: "del-link-title", target: :_blank, rel:"noopener noreferrer" %></li>
+        </div>
+        <% end %>
+    </ul>
+    </div>
     <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>
   <% else %>
