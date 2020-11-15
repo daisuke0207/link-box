@@ -22,16 +22,16 @@ RSpec.describe "Boxes", type: :system do
 
     context 'ユーザーBがログインしているとき' do
       before do
-        # ユーザーBを作成
-        # visit root_path
-        # visit new_user_session_path
-        # fill_in 'メールアドレス', with: user_a.email
-        # fill_in 'パスワード', with: user_a.password
-        # click_on 'ログイン'
+        @user_b = FactoryBot.create(:user, nickname: 'ユーザーB', email: 'b@com')
+        visit root_path
+        visit new_user_session_path
+        fill_in 'メールアドレス', with: @user_b.email
+        fill_in 'パスワード', with: @user_b.password
+        click_on 'ログイン'
       end
 
       it 'ユーザーAが作成したboxが表示されていないこと' do
-        # ユーザーAが作成したbox名が画面に表示されていないこと
+        expect(page).to have_no_content('Aのbox')
       end
     end
   end
