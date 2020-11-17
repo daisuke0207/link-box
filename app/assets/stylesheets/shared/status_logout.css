@@ -1,17 +1,44 @@
 .first-visit {
-  height: calc(100vh - 68px);
+  min-height: calc(100vh - 68px);
   width: 100vw;
+  background-color: rgb(240, 240, 240);
   text-align: center;
-  background-color: rgb(230, 230, 230);
 }
 
 .top-description {
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   font-size: 2rem;
 }
 
+.first-page-lists {
+  display: grid;
+  grid-template-columns: repeat(2, 200px 1fr);
+  grid-template-rows: 1fr;
+}
+
+.first-page-text {
+  opacity: 0.5;
+  font-size: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .first-visit img {
-  width: 70vw;
+  width: 30vw;
   margin-bottom: 70px;
+}
+
+.start {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  justify-content: center;
+  margin: 30px auto 100px auto;
+  column-gap: 30px;
+}
+
+.start-login {
+  font-size: 1.5rem;
+  color: rgba(0, 47, 255, 0.678);
 }
