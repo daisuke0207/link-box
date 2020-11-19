@@ -81,7 +81,7 @@ GitHub, GitHubDesktop
 <br>
 
 # テスト
-RSpec
+RSpec, factory_bot, faker
 
 <br>
 
@@ -92,7 +92,6 @@ VSCode
 
 # 課題や今後実装したい機能
 - リンクの登録をもう少し簡単にできるようにする
-- グループの複製機能
 - 共有機能
 
 <br>
@@ -132,7 +131,7 @@ VSCode
 | Column   | Type        | Options                        |
 | -------- | ----------- | ------------------------------ |
 | title    | string      | null: false                    |
-| my_link  | string      | null: false                    |
+| link     | string      | null: false                    |
 | position | integer     | null: false                    |
 | user     | references  | null: false, foreign_key: true |
 | box      | references  | null: false, foreign_key: true |
