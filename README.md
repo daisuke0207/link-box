@@ -28,18 +28,23 @@ password : white1000
 
 ログアウト状態の画面
 ![logout_view](https://user-images.githubusercontent.com/61821997/98667657-0de15280-2392-11eb-9d00-9a9c4df9089f.gif)
+<br>
 
 新規登録画面
 ![registration](https://user-images.githubusercontent.com/61821997/98669526-d58f4380-2394-11eb-809b-1d52481d2802.gif)
+<br>
 
 グループとリンクの作成機能
 ![create_box_link](https://user-images.githubusercontent.com/61821997/98667881-63b5fa80-2392-11eb-8021-c18ce8b77f72.gif)
+<br>
 
 リンクを開く機能
 ![open_link](https://user-images.githubusercontent.com/61821997/98667778-3e28f100-2392-11eb-9cb4-eff25e97bf5d.gif)
+<br>
 
 すべてのリンクを開く機能
 ![all_open_link](https://user-images.githubusercontent.com/61821997/98667791-441ed200-2392-11eb-80ac-eb66986c4b81.gif)
+<br>
 
 編集・削除機能
 ![edit_delete](https://user-images.githubusercontent.com/61821997/98670287-dbd1ef80-2395-11eb-8dcd-a8d20554e28d.gif)
@@ -108,7 +113,8 @@ VSCode
 
 ### Association
 - has_many :contents
-- has_many :boxes
+- has_many :boxes, through: :photos_tags
+- has_many :deletehistories
 
 <br>
 
@@ -122,7 +128,20 @@ VSCode
 
 ### Association
 - has_many :connects
+- has_many :users, through: :photos_tags
+
+<br>
+
+## user_boxesテーブル
+
+| Column   | Type       | Options     |
+| -------- | ---------- | ----------- |
+| user     | references | null: false, foreign_key: true |
+| box      | references | null: false, foreign_key: true |
+
+### Association
 - belongs_to :user
+- belongs_to :box
 
 <br>
 
@@ -139,3 +158,15 @@ VSCode
 ### Association
 - belongs_to :user
 - belongs_to :box
+
+<br>
+
+## deletehistoriesテーブル
+| Column   | Type        | Options                        |
+| -------- | ----------- | ------------------------------ |
+| title    | string      | null: false                    |
+| link     | string      | null: false                    |
+| user     | references  | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
