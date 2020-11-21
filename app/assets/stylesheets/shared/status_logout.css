@@ -18,6 +18,7 @@
 }
 
 .first-page-text {
+  list-style: none;
   opacity: 0.5;
   font-size: 1.3rem;
   justify-content: center;
