@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Boxes", type: :system do
+RSpec.describe 'Boxes', type: :system do
   describe '一覧表示機能' do
     before do
       @user_a = FactoryBot.create(:user, nickname: 'ユーザーA', email: 'a@com')
       FactoryBot.create(:box, name: 'Aのbox', user: @user_a)
     end
-    
+
     context 'ユーザーAがログインしているとき' do
       before do
         visit root_path

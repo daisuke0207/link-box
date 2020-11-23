@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def delete_history_get
-    delete_histories = Deletehistory.includes(:user).order(id: "DESC")
-    return delete_histories
+    delete_histories = Deletehistory.includes(:user).order(id: 'DESC')
+    delete_histories
   end
 end
