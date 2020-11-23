@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<h1 class="search-top-text">検索結果一覧 : <%= @search_connects.count %>件</h1>
 <div class="connect-list">
   <% @search_connects.each do |connect| %>
     <div class="connect-container">
@@ -7,3 +8,15 @@
     </div>
   <% end %>
 </div>
+<% if @search_connects.count == 0 %>
+  <p class="search-none">検索された文字列を含むリンクタイトルは存在しません</p>
+  <p class="search-all">登録済みのすべてのリンクを表示します</p>
+  <div class="connect-list">
+    <% Connect.all.each do |connect| %>
+      <div class="connect-container">
+        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
+        <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
