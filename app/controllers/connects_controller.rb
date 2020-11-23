@@ -41,9 +41,9 @@ class ConnectsController < ApplicationController
 
   def search
     if params[:title].present?
-      @connects = Connect.where('title LIKE ?', "%#{params[:title]}%")
+      @search_connects = Connect.where('title LIKE ?', "%#{params[:title]}%")
     else
-      @connects = Connect.none
+      @search_connects = Connect.none
     end
   end
 
