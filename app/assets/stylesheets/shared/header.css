@@ -4,10 +4,10 @@
   width: 100%;
   display: grid;
   grid-template:
-    "..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....."
-    "..... menu ..... title  ..... trash ..... left  ..... right ....." 100%
-    "..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....."
-    /1.2vw 0px 50px auto 1fr auto 30px auto 30px auto 5vw;
+    "..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....."
+    "..... menu ..... title  ..... search ..... trash ..... left  ..... right ....." 100%
+    "..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ..... ....."
+    /1.2vw 0px 50px auto 3vw auto 1fr auto 30px auto 30px auto 5vw;
   align-items: center;
 }
 
@@ -30,6 +30,10 @@
   font-weight: bold;
   font-size: 26px;
   color: red;
+}
+
+.search-form {
+  grid-area: search;
 }
 
 .delete-recent {

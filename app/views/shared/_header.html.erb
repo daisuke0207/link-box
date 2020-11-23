@@ -4,7 +4,12 @@
   <% end %>
   <%= link_to "Link", root_path, class: "nav title" %>
   <% if user_signed_in? %>
-    <div class="delete-recent">
+  <%= form_with url: search_box_connects_path(:box_id), method: :get, class: "search-form", local: true do |f| %>
+    <%= f.text_field :title, placeholder: "タイトルを検索" %>
+    <%= f.submit :search %>
+  <% end %>
+
+  <div class="delete-recent">
       <%= image_tag 'trash.svg' ,class: "nav" %>
       <ul class="delete-history">
         <% delete_history_get.each do |history| %>

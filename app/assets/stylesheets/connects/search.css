@@ -1,0 +1,16 @@
+.search-top-text {
+  margin: 50px 0px 50px 5vw;
+  font-size: 1.5rem;
+}
+
+.search-none {
+  font-size: 1.2rem;
+  margin-left: 5vw;
+  margin-bottom: 5px;
+}
+
+.search-all {
+  font-size: 1.2rem;
+  margin-left: 5vw;
+  margin-bottom: 30px;
+}
