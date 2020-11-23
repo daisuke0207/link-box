@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :connects, only: [:index, :destroy, :create] do
       collection do
         delete 'destroy_all'
+        get 'search'
       end
     end
   end
