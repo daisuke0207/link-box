@@ -1,6 +1,6 @@
 class ConnectsController < ApplicationController
-  before_action :move_to_session, only: [:index]
-  before_action :set_box, only: [:index, :create, :destroy]
+  before_action :move_to_session, only: %i[index]
+  before_action :set_box, only: %i[index create destroy]
 
   def index
     @connect = Connect.new

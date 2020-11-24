@@ -1,6 +1,6 @@
 class BoxesController < ApplicationController
-  before_action :move_to_session, only: [:edit]
-  before_action :set_box, only: [:edit, :update, :destroy]
+  before_action :move_to_session, only: %i[edit]
+  before_action :set_box, only: %i[edit update destroy]
 
   def index
     @boxes = Box.includes(:user)
