@@ -6,9 +6,9 @@
     <%= flash[:alert] %>
   </div>
   <label class="form-text", for="email">メールアドレス<span class="indispensable">必須</span></label>
-  <%= f.email_field :email, class: "form-input", id:"email", placeholder:"メールアドレスを入力", autofocus: true %>
+  <%= f.email_field :email, class: "form-input", id:"email", placeholder:"メールアドレスを入力", autofocus: true, required: true %>
   <label class="form-text", for="password">パスワード<span class="indispensable">必須</span></label>
-  <%= f.password_field :password, class: "form-input", id:"password", placeholder:"パスワードを入力"%>
+  <%= f.password_field :password, class: "form-input", id:"password", placeholder:"パスワードを入力", required: true%>
   <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
   <%= f.submit "ログイン", class: "form-submit" %>
 <% end %>

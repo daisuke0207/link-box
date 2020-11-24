@@ -5,7 +5,7 @@
   <%= link_to "Link", root_path, class: "nav title" %>
   <% if user_signed_in? %>
   <%= form_with url: search_box_connects_path(:box_id), method: :get, class: "search-form", local: true do |f| %>
-    <%= f.text_field :title, placeholder: "タイトルを検索" %>
+    <%= f.text_field :title, placeholder: "タイトルを検索", required: true %>
     <%= f.submit :search %>
   <% end %>
 
