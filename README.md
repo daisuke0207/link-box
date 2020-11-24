@@ -29,28 +29,23 @@ password : white1000
 メイン画面
 ![main-view](https://user-images.githubusercontent.com/61821997/99939118-b3da8700-2dac-11eb-9503-23cff41d7f96.gif)
 
-ログアウト状態の画面
-![first_visit](https://user-images.githubusercontent.com/61821997/99939114-b0df9680-2dac-11eb-8382-151dfd802054.gif)
-<br>
-
-新規登録画面
-![registration](https://user-images.githubusercontent.com/61821997/98669526-d58f4380-2394-11eb-809b-1d52481d2802.gif)
-<br>
-
-グループとリンクの作成機能
-![create_box_link](https://user-images.githubusercontent.com/61821997/98667881-63b5fa80-2392-11eb-8021-c18ce8b77f72.gif)
-<br>
-
 リンクを開く機能
 ![open_link](https://user-images.githubusercontent.com/61821997/98667778-3e28f100-2392-11eb-9cb4-eff25e97bf5d.gif)
 <br>
 
 すべてのリンクを開く機能
 ![all_open_link](https://user-images.githubusercontent.com/61821997/98667791-441ed200-2392-11eb-80ac-eb66986c4b81.gif)
+
+グループとリンクの作成機能
+![create_box_link](https://user-images.githubusercontent.com/61821997/98667881-63b5fa80-2392-11eb-8021-c18ce8b77f72.gif)
 <br>
 
-編集・削除機能
-![edit_delete](https://user-images.githubusercontent.com/61821997/98670287-dbd1ef80-2395-11eb-8dcd-a8d20554e28d.gif)
+新規登録画面
+![registration](https://user-images.githubusercontent.com/61821997/98669526-d58f4380-2394-11eb-809b-1d52481d2802.gif)
+<br>
+
+ログアウト状態の画面
+![first_visit](https://user-images.githubusercontent.com/61821997/99939114-b0df9680-2dac-11eb-8382-151dfd802054.gif)
 
 <br>
 
