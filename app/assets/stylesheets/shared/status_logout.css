@@ -3,32 +3,23 @@
   width: 100vw;
   background-color: rgb(240, 240, 240);
   text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.first-view-img {
+}
+
+.first-img-one {
+  width: 100vw;
+  height: calc(100vh - 70px);
 }
 
 .top-description {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
   font-size: 2rem;
-}
-
-.first-page-lists {
-  display: grid;
-  grid-template-columns: repeat(2, 200px 1fr);
-  grid-template-rows: 1fr;
-}
-
-.first-page-text {
-  list-style: none;
-  opacity: 0.5;
-  font-size: 1.3rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.first-visit img {
-  width: 30vw;
-  margin-bottom: 70px;
 }
 
 .start {
