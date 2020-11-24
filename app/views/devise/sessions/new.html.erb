@@ -11,4 +11,5 @@
   <%= f.password_field :password, class: "form-input", id:"password", placeholder:"パスワードを入力", required: true%>
   <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
   <%= f.submit "ログイン", class: "form-submit" %>
+  <%= link_to "新規登録はこちら", new_user_registration_path %>
 <% end %>
