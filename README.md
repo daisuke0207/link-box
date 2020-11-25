@@ -27,7 +27,11 @@ password : white1000
 # DEMO
 
 メイン画面
-![main-view](https://user-images.githubusercontent.com/61821997/99939118-b3da8700-2dac-11eb-9503-23cff41d7f96.gif)
+![main_view](https://user-images.githubusercontent.com/61821997/100194670-735c4400-2f39-11eb-956f-28584b4de7e6.gif)
+
+ファーストビュー
+![first_view](https://user-images.githubusercontent.com/61821997/100194667-722b1700-2f39-11eb-8603-7051c8d26528.gif)
+<br>
 
 リンクを開く機能
 ![open_link](https://user-images.githubusercontent.com/61821997/98667778-3e28f100-2392-11eb-9cb4-eff25e97bf5d.gif)
@@ -42,11 +46,6 @@ password : white1000
 
 新規登録画面
 ![registration](https://user-images.githubusercontent.com/61821997/98669526-d58f4380-2394-11eb-809b-1d52481d2802.gif)
-<br>
-
-ログアウト状態の画面
-![first_visit](https://user-images.githubusercontent.com/61821997/99939114-b0df9680-2dac-11eb-8382-151dfd802054.gif)
-
 <br>
 
 # 工夫したポイント
