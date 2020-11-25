@@ -9,6 +9,7 @@
 .first-img-one {
   width: 100vw;
   height: calc(100vh - 70px);
+  color: black;
 }
 
 .top-description {
