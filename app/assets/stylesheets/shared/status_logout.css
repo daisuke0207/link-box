@@ -29,7 +29,7 @@
 .contact-menu {
   position: absolute;
   top: 40%;
-  left: 25%;
+  left: 23%;
   text-align: center;
 }
 
@@ -44,7 +44,7 @@
 .sns-menu {
   position: absolute;
   top: 40%;
-  right: 25%;
+  right: 23%;
   text-align: center;
 }
 
@@ -52,6 +52,7 @@
   font-size: 1.7rem;
   font-weight: 150;
   margin-bottom: 20px;
+  width: 200px;
   border-bottom: 1px dashed black;
 }
 
