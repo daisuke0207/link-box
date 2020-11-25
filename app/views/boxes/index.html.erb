@@ -1,9 +1,7 @@
 <%= render "shared/header" %>
 <div class="wrapper">
     <% unless user_signed_in? %>
-      <div class="first-visit">
-        <%= render "logout" %>
-      </div>
+      <%= render "logout" %>
     <% else %>
       <%= render "side_bar"%>
     <% end %>
