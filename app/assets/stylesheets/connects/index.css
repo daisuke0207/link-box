@@ -56,6 +56,11 @@
   height: 50px;
 }
 
+.image-set {
+  height: 50px;
+  width: 50px;
+}
+
 .link-title {
   text-decoration: none;
   color: black;
@@ -76,7 +81,7 @@
 }
 
 .add-connect {
-  margin: 30px 5vw 300px 5vw;
+  margin: 30px 5vw 100px 5vw;
   color: black;
   font-size: 1.3rem;
   opacity: 0.7;
@@ -101,7 +106,7 @@
 }
 
 .connect-submit {
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   width: 300px;
   height: 40px;
 }
@@ -125,5 +130,22 @@
   }
   .all-open {
     font-size: 14px;
+  }
+  .connect-container {
+    grid-template-columns: 30px 1fr 50px;
+    grid-template-rows: 50px;
+    align-items: center;
+  }
+  .image-link {
+    height: 30px;
+  }
+  .image-set {
+    height: 30px;
+    width: 30px;
+  }
+  .link-title {
+    font-size: 1.2rem;
+    margin-left: 30px;
+    padding: 15px 0px;
   }
 }

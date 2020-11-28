@@ -51,7 +51,8 @@
   position: absolute;
   width: 150px;
   background: rgb(214, 214, 214);
-  top: 50px;
+  top: 40px;
+  right: 10px;
   display: none;
   align-items: center;
 }
@@ -101,6 +102,27 @@
   font-size: 1.2rem;
 }
 
+.user-menu-btn {
+  grid-area: right;
+}
+
+.user-menu {
+  display: none;
+}
+
+.user-menu-lists {
+  display: none;
+  position: absolute;
+  background: rgb(214, 214, 214);
+  top: 40px;
+  right: 10px;
+  align-items: center;
+}
+
+.user-menu-btn:hover .user-menu-lists {
+  display: block;
+}
+
 .logout {
   grid-area: right;
 }
@@ -134,7 +156,13 @@
   .search-title {
     width: 130px;
   }
+  .user-nickname {
+    display: none;
+  }
   .logout {
     display: none;
+  }
+  #user-menu {
+    display: block;
   }
 }
