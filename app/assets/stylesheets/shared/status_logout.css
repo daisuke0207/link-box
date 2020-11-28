@@ -23,9 +23,9 @@
 
 .top-description {
   width: 100%;
-  margin: 100px 0 10px;
+  margin: clamp(50px, 80px, 120px) 0 10px;
   text-align: center;
-  font-size: 2.7rem;
+  font-size: clamp(1.2rem, 2rem, 2.5rem);
 }
 
 .top-text {
@@ -43,37 +43,38 @@
   margin: 0 auto;
 }
 
-.demo-views-wrap {
-  position: absolute;
-  height: min(100%, 1000px);
+.background-second {
+  position: relative;
+  display: block;
+  background-color: lightblue;
   width: 100%;
-  top: 100%;
+  height: min(100%, 1000px);
   background-color: lightsalmon;
 }
 
-.demo-views {
+.demo-view-wrap {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%);
-  width: 800px;
-  height: 500px;
-}
-
-.demo-views-wrap h2 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  font-size: 2rem;
-  width: 100;
-}
-
-.demo-views-wrap p {
-  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max(300px, 60vw);
   text-align: center;
-  top: 17%;
-  left: 50%;
-  transform: translate(-50%);
-  width: 400px;
+}
+
+.demo-view-wrap h2 {
+  margin: clamp(50px, 80px, 120px) 0 10px;
+  font-size: clamp(1.2rem, 2rem, 2.5rem);
+}
+
+.demo-view-wrap p {
+  text-align: center;
+  margin-bottom: 50px;
+  width: max(300px, 60vw);
+}
+
+.demo-view {
+  text-align: center;
+  width: max(300px, 60vw);
+  height: auto;
 }
