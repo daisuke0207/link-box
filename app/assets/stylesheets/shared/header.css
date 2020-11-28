@@ -114,13 +114,19 @@
   display: none;
   position: absolute;
   background: rgb(214, 214, 214);
-  top: 40px;
+  top: 35px;
   right: 10px;
   align-items: center;
 }
 
 .user-menu-btn:hover .user-menu-lists {
   display: block;
+}
+
+.user-menu-list a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.8;
 }
 
 .logout {
@@ -162,7 +168,7 @@
   .logout {
     display: none;
   }
-  #user-menu {
+  .user-menu {
     display: block;
   }
 }

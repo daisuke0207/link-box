@@ -22,7 +22,7 @@
   </div>
   <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
   <div class="user-menu-btn">
-    <%= image_tag 'face.svg', class: "nav user-menu", id: "user-menu" %>
+    <%= image_tag 'face.svg', class: "nav user-menu" %>
     <ul class="user-menu-lists", id="user-menu-lists">
       <li class="user-menu-list"><%= link_to current_user.nickname, root_path %></li>
       <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
