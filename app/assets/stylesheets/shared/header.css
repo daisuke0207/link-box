@@ -101,6 +101,10 @@
   font-size: 1.2rem;
 }
 
+#user-menu {
+  grid-area: right;
+}
+
 .logout {
   grid-area: right;
 }
@@ -133,6 +137,9 @@
   }
   .search-title {
     width: 130px;
+  }
+  .user-nickname {
+    display: none;
   }
   .logout {
     display: none;

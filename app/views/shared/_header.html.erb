@@ -21,6 +21,7 @@
     </ul>
     </div>
     <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
+    <%= image_tag 'face.svg', class: "nav", id: "user-menu" %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>
   <% else %>
     <%= link_to "ログイン", new_user_session_path, class: "nav login" %>
