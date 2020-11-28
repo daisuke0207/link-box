@@ -10,19 +10,25 @@
   <% end %>
 
   <div class="delete-recent">
-      <%= image_tag 'trash.svg' ,class: "nav" %>
-      <ul class="delete-history">
-        <% delete_history_get.each do |history| %>
-        <div class="del-lists">
-          <li><a class = "del-image-link" href= "<%= text_url_to_link(history.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(history.link) %>"></a></li>
-          <li><%= link_to history.title, text_url_to_link(history.link), class: "del-link-title", target: :_blank, rel:"noopener noreferrer" %></li>
-        </div>
-        <% end %>
+    <%= image_tag 'trash.svg' ,class: "nav" %>
+    <ul class="delete-history">
+      <% delete_history_get.each do |history| %>
+      <div class="del-lists">
+        <li><a class = "del-image-link" href= "<%= text_url_to_link(history.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(history.link) %>"></a></li>
+        <li><%= link_to history.title, text_url_to_link(history.link), class: "del-link-title", target: :_blank, rel:"noopener noreferrer" %></li>
+      </div>
+      <% end %>
     </ul>
-    </div>
-    <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
-    <%= image_tag 'face.svg', class: "nav", id: "user-menu" %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>
+  </div>
+  <%= link_to current_user.nickname, root_path, class: "nav user-nickname" %>
+  <div class="user-menu-btn">
+    <%= image_tag 'face.svg', class: "nav user-menu", id: "user-menu" %>
+    <ul class="user-menu-lists", id="user-menu-lists">
+      <li class="user-menu-list"><%= link_to current_user.nickname, root_path %></li>
+      <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    </ul>
+  </div>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav logout" %>
   <% else %>
     <%= link_to "ログイン", new_user_session_path, class: "nav login" %>
     <%= link_to "新規登録", new_user_registration_path, class: "nav sign-up" %>
