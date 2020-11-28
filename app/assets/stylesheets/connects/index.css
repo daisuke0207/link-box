@@ -110,3 +110,20 @@
   cursor: pointer;
   background-color: lightgray;
 }
+
+@media screen and (max-width: 1000px) {
+  .m-header {
+    display: grid;
+    grid-template:
+      "..... .....   ..... .....    ..... .....    ....." 30px
+      "..... b_title ..... all_open ..... box_edit ....." 50px
+      "..... .....   ..... .....    ..... .....    ....." 30px
+      / 5vw auto 20px auto 1fr auto 5vw;
+  }
+  .b-title {
+    font-size: 1.2rem;
+  }
+  .all-open {
+    font-size: 14px;
+  }
+}
