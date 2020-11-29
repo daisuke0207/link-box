@@ -102,7 +102,7 @@
 }
 
 .user-menu-btn {
-  grid-area: right;
+  grid-area: left;
 }
 
 .user-menu {
@@ -168,5 +168,8 @@
   }
   .user-menu {
     display: block;
+  }
+  .user-menu-list a {
+    font-size: 14px;
   }
 }

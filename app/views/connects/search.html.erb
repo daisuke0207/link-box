@@ -3,18 +3,18 @@
 <div class="connect-list">
   <% @search_connects.each do |connect| %>
     <div class="connect-container">
-      <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
+      <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
       <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
     </div>
   <% end %>
 </div>
 <% if @search_connects.count == 0 %>
-  <p class="search-none">検索された文字列を含むリンクタイトルは存在しません</p>
-  <p class="search-all">登録済みのすべてのリンクを表示します</p>
+  <p class="search-none">検索された文字列を含むリンクタイトルは存在しません。</p>
+  <p class="search-all">登録済みのすべてのリンクを表示します。</p>
   <div class="connect-list">
     <% Connect.all.each do |connect| %>
       <div class="connect-container">
-        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" style="width:50px; height:50px"></a>
+        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
         <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
       </div>
     <% end %>
