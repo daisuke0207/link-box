@@ -3,7 +3,7 @@
 <div class="connect-list">
   <% @search_connects.each do |connect| %>
     <div class="connect-container">
-      <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
+      <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="https://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
       <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
     </div>
   <% end %>
@@ -14,7 +14,7 @@
   <div class="connect-list">
     <% Connect.all.each do |connect| %>
       <div class="connect-container">
-        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="http://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
+        <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="https://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
         <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
       </div>
     <% end %>
