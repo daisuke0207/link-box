@@ -4,7 +4,7 @@ class Box < ApplicationRecord
   end
 
   def destroy_all_history
-    self.connects.each do |connect|
+    connects.each do |connect|
       new_history = Deletehistory.new
       new_history.user_id = connect.user_id
       new_history.title = connect.title

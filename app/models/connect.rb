@@ -5,9 +5,9 @@ class Connect < ApplicationRecord
 
   def delete_history
     new_history = Deletehistory.new
-    new_history.user_id = self.user_id
-    new_history.title = self.title
-    new_history.link = self.link
+    new_history.user_id = user_id
+    new_history.title = title
+    new_history.link = link
 
     if Deletehistory.find_by(link: new_history.link)
       old_history = Deletehistory.find_by(link: new_history.link)
