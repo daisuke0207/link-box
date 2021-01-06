@@ -14,8 +14,8 @@
     <ul class="delete-history">
       <% delete_history_get.each do |history| %>
       <div class="del-lists">
-        <li><a class = "del-image-link" href= "<%= text_url_to_link(history.link) %>" target=_blank, rel="noopener noreferrer" ><img src="https://favicon.hatena.ne.jp/?url=<%= text_url_to_link(history.link) %>"></a></li>
-        <li><%= link_to history.title, text_url_to_link(history.link), class: "del-link-title", target: :_blank, rel:"noopener noreferrer" %></li>
+        <li><a class = "del-image-link" href= "<%= history.link %>" target=_blank, rel="noopener noreferrer" ><img src="https://favicon.hatena.ne.jp/?url=<%= history.link %>"></a></li>
+        <li><%= link_to history.title, history.link, class: "del-link-title", target: :_blank, rel:"noopener noreferrer" %></li>
       </div>
       <% end %>
     </ul>
