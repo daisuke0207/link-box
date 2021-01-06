@@ -12,7 +12,7 @@
   <p class="search-none">検索された文字列を含むリンクタイトルは存在しません。</p>
   <p class="search-all">登録済みのすべてのリンクを表示します。</p>
   <div class="connect-list">
-    <% Connect.all.each do |connect| %>
+    <% current_user.connects.each do |connect| %>
       <div class="connect-container">
         <a class = "image-link" href= "<%= text_url_to_link(connect.link) %>" target=_blank, rel="noopener noreferrer" ><img src="https://favicon.hatena.ne.jp/?url=<%= text_url_to_link(connect.link) %>" class="image-set"></a>
         <%= link_to connect.title, text_url_to_link(connect.link), class: "link-title", target: :_blank, rel:"noopener noreferrer" %>
