@@ -9,6 +9,7 @@ class BoxesController < ApplicationController
   def create
     box = Box.create(name: params[:name], position: params[:position], user_id: current_user.id)
     render json: { box: box }
+    redirect_to box_connects_path(box)
   end
 
   def edit
