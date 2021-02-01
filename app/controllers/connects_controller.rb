@@ -66,6 +66,6 @@ class ConnectsController < ApplicationController
   end
 
   def destroy_all_history(connects)
-    connects.each(&:delete_history)
+    current_user.connects.each(&:delete_history)
   end
 end
